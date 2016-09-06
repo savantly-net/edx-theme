@@ -1,7 +1,5 @@
-$static-path: '../../../../../edx-platform/';
-
 // Theming overrides for sample theme
 @import 'overrides';
 
 // import the rest of the application
-@import 'lms/static/sass/lms-main';
+@import '../../../../../edx-platform/lms/static/sass/lms-main';
