@@ -1,37 +1,58 @@
 ## mako
-<%!
-  from django.core.urlresolvers import reverse
-  from django.utils.translation import ugettext as _
-%>
-<%!
-  from datetime import date
-%>
+<%page expression_filter="h"/>
+<%namespace name='static' file='static_content.html'/>
 
-<div class="wrapper-footer">
-  <footer>
-    <div class="colophon">
-      <nav class="nav-colophon">
-        <ol>
-          <li><a href="${reverse('about')}">${_("About")}</a></li>
-          <li><a href="${reverse('about')}#careers">${_("Careers")}</a></li>
-          <li><a href="${reverse('about')}#contact">${_("Contact")}</a></li>
-          <li><a href="${reverse('tos')}">${_("Terms of Service")}</a></li>
-          <li><a href="${reverse('tos')}#privacy">${_("Privacy Policy")}</a></li>
-          <li><a href="${reverse('tos')}#honor">${_("Honor Code")}</a></li>
-          <li><a href="${reverse('tos')}#copyright">${_("Copyright")}</a></li>
-        </ol>
-      </nav>
+<section class="footer-main">
+<div class="grid-manual grid-container">
+  <div class="row">
+    <div class="col col-12 sm-col-12 md-col-4 footer-logo">
+      <ul>
+          <li><a href="/"><img src="http://placehold.it/190x60" alt="Logo" /></a></li>
+          <li><a href="#">More about Lorem Ipsum</a></li>
+      </ul>
     </div>
-    <div class="references">
-      <span>Built on <a href="http://open.edx.org">OpenEdX</a>.</span>
+    <div class="col col-12 sm-col-12 md-col-4">
+      <div class="col col-6">
+      <ul>
+        <li>About</li>
+        <li><a href="/about">About this Site</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
     </div>
 
-    <div class="copyright">
-        <p><span>
-            ${_('Copyright {year}. All rights reserved.').format(
-                year=date.today().year
-            )}
-        </span></p>
+    <div class="col col-6">
+      <ul>
+        <li>Support</li>
+        <li><a href="/tos">Terms of Service</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/honor">Honor Code</a></li>
+      </ul>
     </div>
-  </footer>
+    </div>
+    <div class="col col-12 sm-col-12 md-col-4">
+      <div class="col col-6">
+      <ul>
+        <li>Connect</li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+
+    <div class="col col-6 open-edx-logo">
+      <ul>
+        <li>
+          <a href="https://open.edx.org">
+            <img src="${static.url('images/openedx-logo-tag.png')}" alt="openedx-logo" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+
+
+  </div>
 </div>
+</section>
