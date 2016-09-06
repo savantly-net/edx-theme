@@ -8,6 +8,7 @@ from django.core.urlresolvers import reverse
 %>
 
 <%block name="headextra">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="${static.url('css/slick.css')}"/>
 </%block>
 
@@ -22,6 +23,7 @@ from django.core.urlresolvers import reverse
 </script>
 <%include file="about_site.html" />
 <script type="text/javascript" src="${static.url('js/slick.min.js')}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </%block>
 
 <section class="home">
