@@ -23,7 +23,6 @@ from django.core.urlresolvers import reverse
             <div class="carousel-caption">
               <h1>Start moving forward.</h1>
               <p>Get engaged with custom learning paths to fast track on-boarding</p>
-              <p><a class="btn btn-lg btn-primary" href="register" role="button">Sign up today</a></p>
             </div>
           </div>
         </div>
@@ -33,7 +32,6 @@ from django.core.urlresolvers import reverse
             <div class="carousel-caption">
               <h1>Mobile Learning.</h1>
               <p>Access your course content from anywhere</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
@@ -43,7 +41,6 @@ from django.core.urlresolvers import reverse
             <div class="carousel-caption">
               <h1>Knowledge is Power.</h1>
               <p>Empower yourself with knowledge, unlock your ability to succeed, and break out of the typical box</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
             </div>
           </div>
         </div>
@@ -60,58 +57,55 @@ from django.core.urlresolvers import reverse
     
 <div class="container marketing">
 
-
-
-<section class="container-fluid">
-  <header>
-    <div class="outer-wrapper">
-      <div class="title">
-        <div class="heading-group">
-          % if homepage_overlay_html:
-            ${homepage_overlay_html}
-          % else:
-              ## Translators: 'Open edX' is a brand, please keep this untranslated. See http://openedx.org for more information.
-              <h1>${_("Welcome to Open edX!")}</h1>
-              ## Translators: 'Open edX' is a brand, please keep this untranslated. See http://openedx.org for more information.
-              <p>${_("It works! This is the default homepage for this Open edX instance.")}</p>
-          % endif
-        </div>
-        % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-          <div class="course-search">
-            <form method="get" action="/courses">
-              <label><span class="sr">${_("Search for a course")}</span>
-                <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-              </label>
-              <button class="search-button" type="submit">
-                <i class="icon fa fa-search" aria-hidden="true"></i><span class="sr">${_("Search")}</span>
-              </button>
-            </form>
-          </div>
-        % endif
-
-      </div>
-
-      % if show_homepage_promo_video:
-        <a href="#video-modal" class="media" rel="leanModal">
-          <div class="hero">
-            <div class="play-intro"></div>
-          </div>
-        </a>
-      % endif
-    </div>
-
-  </header>
-  <%include file="${courses_list}" />
-
-</section>
-
-% if show_homepage_promo_video:
-  <section id="video-modal" class="modal home-page-video-modal video-modal">
-    <div class="inner-wrapper">
-      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-% endif
+	<section class="container-fluid">
+	  <header>
+	    <div class="outer-wrapper">
+	      <div class="title">
+	        <div class="heading-group">
+	          % if homepage_overlay_html:
+	            ${homepage_overlay_html}
+	          % else:
+	              ## Translators: 'Savantly' is a brand, please keep this untranslated. See http://savantly.net for more information.
+	              <h1>${_("Welcome to Savantly Learning!")}</h1>
+	              <p><a class="btn btn-lg btn-primary" href="register" role="button">Sign up today</a></p>
+	          % endif
+	        </div>
+	        % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+	          <div class="course-search">
+	            <form method="get" action="/courses">
+	              <label><span class="sr">${_("Search for a course")}</span>
+	                <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+	              </label>
+	              <button class="search-button" type="submit">
+	                <i class="icon fa fa-search" aria-hidden="true"></i><span class="sr">${_("Search")}</span>
+	              </button>
+	            </form>
+	          </div>
+	        % endif
+	
+	      </div>
+	
+	      % if show_homepage_promo_video:
+	        <a href="#video-modal" class="media" rel="leanModal">
+	          <div class="hero">
+	            <div class="play-intro"></div>
+	          </div>
+	        </a>
+	      % endif
+	    </div>
+	
+	  </header>
+	  <%include file="${courses_list}" />
+	
+	</section>
+	
+	% if show_homepage_promo_video:
+	  <section id="video-modal" class="modal home-page-video-modal video-modal">
+	    <div class="inner-wrapper">
+	      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+	    </div>
+	  </section>
+	% endif
 
 </div>
 
