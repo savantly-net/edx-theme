@@ -7,57 +7,16 @@ from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
 %>
 
-<div>
-	
-</div>
 
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="${static.url('images/banners/banner01.jpg')}" alt="Get Started">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Start moving forward.</h1>
-              <p>Get engaged with custom learning paths to fast track on-boarding</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide" src="${static.url('images/banners/banner02.jpg')}" alt="Access">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Mobile Learning.</h1>
-              <p>Access your course content from anywhere</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="${static.url('images/banners/banner03.jpg')}" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Knowledge is Power.</h1>
-              <p>Empower yourself with knowledge, unlock your ability to succeed, and break out of the typical box</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron main">
+  <div class="container">
+   <h1>Start moving forward.</h1>
+          <p>Get engaged with custom learning paths to fast track on-boarding</p>
+    <p><a class="btn btn-primary btn-lg" href="javascript://clickLogin();" role="button">Learn more &raquo;</a></p>
+  </div>
+</div>
     
 <div class="container marketing">
 
@@ -115,7 +74,7 @@ from django.core.urlresolvers import reverse
 
 <%block name="js_extra">
 	<script type="text/javascript">
-      $(window).load(function() {
+      $(window).load(function clickLogin() {
          if(getParameterByName('next')) {
               $('#login').trigger("click");
          }
